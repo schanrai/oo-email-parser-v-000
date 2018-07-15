@@ -10,6 +10,10 @@ class EmailParser
     @all
   end
 
+  def self.save
+    @all << self
+  end
+
   def self.parse
 
   end
