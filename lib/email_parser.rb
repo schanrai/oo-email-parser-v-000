@@ -8,15 +8,16 @@ class EmailParser
   #addresses is the instance variable of all unformatted string of emails passed in
   attr_accessor :addresses
 
+  #assign the unformatted string of emails to the instance variable here on initialization
+  #what is the instance that is being created? It is an instance of the parser which will act on the cluster of data (unformatted emails)
   def initialize(emails)
     @addresses = emails
   end
 
 #instance method parse - accepts the string of unformatted emails
 #parses spaces and csv delimited emails and returns them as an array
-#adds that array to @@all if not duplicate (needs to check @@all to make sure it doesn't exist)
 #returns only unique emails
-#what is the instance that is being created? Is it the string of unformatted emails? Or is the newly formatted emails?
+#
   def parse
     split_array = @addresses.split(/\b[,\s]+/)
      split_array.uniq
