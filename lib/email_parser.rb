@@ -9,6 +9,7 @@ class EmailParser
   attr_accessor :addresses
 
   #assign the unformatted string of emails to the instance variable here on initialization
+  #no need for class constructor because you are working on the instance
   #what is the instance that is being created? It is an instance of the parser which will act on the cluster of data (unformatted emails)
   def initialize(emails)
     @addresses = emails
@@ -16,8 +17,8 @@ class EmailParser
 
 #instance method parse - accepts the string of unformatted emails
 #parses spaces and csv delimited emails and returns them as an array
-#returns only unique emails
-#
+#returns only unique emails - meaning you remove dupes from that cluster of data when you return it.
+#you are only being asked to look at the instance and the data that is passed in 
   def parse
     split_array = @addresses.split(/\b[,\s]+/)
      split_array.uniq
