@@ -14,8 +14,9 @@ class EmailParser
     @all << self
   end
 
+#instance method parse
   def parse(emails)
-    Emailparser.new
+    parser = Emailparser.new
   end
 
 end
