@@ -9,11 +9,11 @@ class EmailParser
   @@all =[]
 
   def self.all
-    @all
+    @@all
   end
 
   def self.save
-    @all << self
+    @@all << self
   end
 
 #instance method parse - accepts the string of unformatted emails
