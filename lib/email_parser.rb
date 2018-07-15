@@ -19,6 +19,7 @@ class EmailParser
 #instance method parse - accepts the string of unformatted emails
 #parses spaces and csv delimited emails and returns them as an array
 #adds that array to @@all if not duplicate
+#returns only unique emails
 #what is the instance that is being created? Is it the string of unformatted emails? Or is the newly formatted emails?
   def parse(emails)
     some_var = Emailparser.new
