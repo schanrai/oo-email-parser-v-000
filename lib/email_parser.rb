@@ -26,8 +26,8 @@ class EmailParser
 #adds that array to @@all if not duplicate (needs to check @@all to make sure it doesn't exist)
 #returns only unique emails
 #what is the instance that is being created? Is it the string of unformatted emails? Or is the newly formatted emails?
-  def parse(emails)
-    split_array = emails.split(" ")
+  def parse
+    split_array = @addresses.split(" ")
     split_array.each do |address|
       if address.in @@all
         some_var.addresses
