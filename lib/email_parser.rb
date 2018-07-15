@@ -23,6 +23,7 @@ class EmailParser
   def parse(emails)
     some_var = Emailparser.new
     split_array= emails.split(" ")
+    split_array.each {|address| some_var.addresses = address}
 
 
   end
