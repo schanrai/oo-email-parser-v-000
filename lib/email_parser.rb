@@ -22,7 +22,8 @@ class EmailParser
 #what is the instance that is being created? Is it the string of unformatted emails? Or is the newly formatted emails?
   def parse(emails)
     some_var = Emailparser.new(emails)
-    emails.split(" ")
+    some_var.addresses = emails.split(" ")
+
   end
 
 end
