@@ -7,15 +7,6 @@ class EmailParser
   #Use an `attr_accessor` to set and get the list of emails
   attr_accessor :addresses
   #list of all email addresses
-  @@all =[]
-
-  def self.all
-    @@all
-  end
-
-  def self.save
-    @@all << self
-  end
 
   def initialize(emails)
     @addresses = emails
@@ -27,21 +18,8 @@ class EmailParser
 #returns only unique emails
 #what is the instance that is being created? Is it the string of unformatted emails? Or is the newly formatted emails?
   def parse
-    split_array = @addresses.split(", ")
-    split_array.each do |address|
-      if address.in @@all
-        some_var.addresses
-      else
-      some_var.addresses << address
-      some_var.addresses
-    end
-  end
-    #@@all.push(some_var.addresses) unless @@all.include?(some_var.addresses)
-
-    #if
- #@@all.find {|song| song.name == song_name}
-
-
+    split_array = @addresses.split(/\b[,\s]+/)
+     split_array.uniq
   end
 
 end
