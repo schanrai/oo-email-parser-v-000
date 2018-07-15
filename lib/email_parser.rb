@@ -23,6 +23,7 @@ class EmailParser
   def parse(emails)
     some_var = Emailparser.new(emails)
     some_var.addresses = emails.split(" ")
+    
 
   end
 
