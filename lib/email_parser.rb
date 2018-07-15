@@ -25,28 +25,20 @@ class EmailParser
   def parse(emails)
     some_var = Emailparser.new
     split_array = emails.split(" ")
-    split_array.each do |address| 
+    split_array.each do |address|
       if address.in @@all
         some_var.addresses
       else
-      some_var.addresses << address 
+      some_var.addresses << address
       some_var.addresses
     end
+  end
     #@@all.push(some_var.addresses) unless @@all.include?(some_var.addresses)
 
     #if
  #@@all.find {|song| song.name == song_name}
 
 
-  end
-
-
-  def self.new_from_filename(file_name)
-    this_song = Song.new
-    split_array = file_name.chomp('.mp3').split (" - ")
-    this_song.artist_name= split_array[0]
-    this_song.name= split_array[1]
-    return this_song
   end
 
 end
