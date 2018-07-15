@@ -4,6 +4,7 @@
 # or whitespace (' ').
 #`EmailParser` class that gets initialized with a string of emails.
 class EmailParser
+  #Use an `attr_accessor` to set and get the list of emails
   attr_accessor :addresses
   @@all =[]
 
