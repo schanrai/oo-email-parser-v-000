@@ -17,6 +17,10 @@ class EmailParser
     @@all << self
   end
 
+  def initialize(emails)
+    @addresses = emails
+  end
+
 #instance method parse - accepts the string of unformatted emails
 #parses spaces and csv delimited emails and returns them as an array
 #adds that array to @@all if not duplicate (needs to check @@all to make sure it doesn't exist)
