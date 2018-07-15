@@ -6,6 +6,7 @@
 class EmailParser
   #Use an `attr_accessor` to set and get the list of emails
   attr_accessor :addresses
+  #list of all email addresses
   @@all =[]
 
   def self.all
@@ -24,8 +25,12 @@ class EmailParser
   def parse(emails)
     some_var = Emailparser.new
     split_array = emails.split(" ")
-    split_array.each {|address| some_var.addresses = address}
-
+    split_array.each {|address| some_var.addresses == address}
+    @@all.push(some_var.addresses) unless @@all.include?(some_var.addresses)
+    #if 
+ #@@all.find {|song| song.name == song_name}
+    
+    
   end
 
 
