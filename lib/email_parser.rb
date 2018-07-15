@@ -25,12 +25,13 @@ class EmailParser
   def parse(emails)
     some_var = Emailparser.new
     split_array = emails.split(" ")
-    split_array.each {|address| some_var.addresses == address}
-    @@all.push(some_var.addresses) unless @@all.include?(some_var.addresses)
-    #if 
+    split_array.each {|address| some_var.addresses << address}
+    #@@all.push(some_var.addresses) unless @@all.include?(some_var.addresses)
+
+    #if
  #@@all.find {|song| song.name == song_name}
-    
-    
+
+
   end
 
 
