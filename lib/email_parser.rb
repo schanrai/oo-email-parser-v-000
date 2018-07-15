@@ -15,7 +15,7 @@ class EmailParser
     @addresses = emails
   end
 
-#instance method parse 
+#instance method parse (data is already passed into the instance @addresses)
 #parses spaces and csv delimited emails and returns them as an array
 #returns only unique emails - meaning you remove dupes from that cluster of data when you return it.
 #you are only being asked to look at the instance and the data that is passed in
