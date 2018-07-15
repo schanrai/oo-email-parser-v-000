@@ -21,10 +21,19 @@ class EmailParser
 #adds that array to @@all if not duplicate
 #what is the instance that is being created? Is it the string of unformatted emails? Or is the newly formatted emails?
   def parse(emails)
-    some_var = Emailparser.new(emails)
+    some_var = Emailparser.new
     some_var.addresses = emails.split(" ")
     
 
+  end
+
+
+  def self.new_from_filename(file_name)
+    this_song = Song.new
+    split_array = file_name.chomp('.mp3').split (" - ")
+    this_song.artist_name= split_array[0]
+    this_song.name= split_array[1]
+    return this_song
   end
 
 end
