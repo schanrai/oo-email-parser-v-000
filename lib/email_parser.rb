@@ -25,7 +25,13 @@ class EmailParser
   def parse(emails)
     some_var = Emailparser.new
     split_array = emails.split(" ")
-    split_array.each {|address| some_var.addresses << address}
+    split_array.each do |address| 
+      if address.in @@all
+        some_var.addresses
+      else
+      some_var.addresses << address 
+      some_var.addresses
+    end
     #@@all.push(some_var.addresses) unless @@all.include?(some_var.addresses)
 
     #if
