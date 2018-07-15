@@ -5,6 +5,8 @@
 class EmailParser
   attr_accessor :addresses
 
+  
+  
   def self.parse
     
   end
