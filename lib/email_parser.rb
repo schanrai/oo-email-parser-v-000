@@ -5,6 +5,7 @@
 #`EmailParser` class that gets initialized with a string of emails.
 class EmailParser
 
+  #addresses is the instance variable of all unformatted string of emails passed in
   attr_accessor :addresses
 
   def initialize(emails)
