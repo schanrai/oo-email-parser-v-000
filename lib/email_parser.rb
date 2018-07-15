@@ -15,10 +15,10 @@ class EmailParser
     @addresses = emails
   end
 
-#instance method parse - accepts the string of unformatted emails
+#instance method parse 
 #parses spaces and csv delimited emails and returns them as an array
 #returns only unique emails - meaning you remove dupes from that cluster of data when you return it.
-#you are only being asked to look at the instance and the data that is passed in 
+#you are only being asked to look at the instance and the data that is passed in
   def parse
     split_array = @addresses.split(/\b[,\s]+/)
      split_array.uniq
